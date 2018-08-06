@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+			<link rel="stylesheet" type="text/css" href="Register.css"></link>
+
+</head>
+<body style="background-color: rgba(132,234,4,0.4)">
+	<div class='form'>
+		<p><%= typeof msg!='undefined'?msg:''%></p>
+<form method="post" action='/register'>
+	<label style="font-size: 2em;">REGISTER</label><br><br><br>
+	<img src="https://s3.amazonaws.com/thumbnails.illustrationsource.com/huge.102.513291.JPG" alt="" width="200px" height="200px"><br><br>
+	<label>Username</label><br><br>
+	<input  type="text" name="username" required="true"><br><br>
+	<label>Email</label><br><br>
+	<p style="font-size: 1.5em"><%= typeof email_msg!='undefined'?email_msg:''%></p>
+	<input type="email" name="email" required="true"><br><br>
+	<label>Password</label><br><br>
+	<p><%= typeof pass_msg!='undefined'?pass_msg:''%></p>
+	<input type="password" name="password" required="true" placeholder="Should be of five characters"><br><br>
+	<label>Confirm Password</label><br><br>
+	<input type="password" name="cpassword" required="true" ><br><br><br>
+	<button style="cursor: pointer;font-size: 1em">Register</button><br><br>
+	<p style="font-family: sans-serif;">Already Have an Account!</p>
+</form>
+	<form action='/login_page' method="GET">
+		<button style="cursor: pointer;">Click to Login</button>
+</form>
+</div>
+</body>
+</html>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Friendlist from './Component/friendlist/Friendlist';
 import User  from './Component/upperborder/User';
 import Chatpage from './Component/chatpage/Chatpage';
+import axios from 'axios';
 import 'tachyons';
 
 
@@ -9,7 +10,9 @@ class App extends Component {
   constructor(){
     super()
     this.state={route:'home',friend:''}
-  }
+
+    }
+
   onchatpage=(friend)=>{
     this.setState({route:'chatpage',friend})
   }
@@ -17,12 +20,14 @@ class App extends Component {
   onhomechange=()=>{this.setState({route:'home'})}
 
 
-  render() {
-    return (
-      <div>
-     {
 
-        (this.state.route==='home')
+  render() {
+    return(
+      <div>
+  
+    {
+
+      (this.state.route==='home')
         ?<div>
       <User>
       <Friendlist route={this.onchatpage} />
@@ -32,6 +37,7 @@ class App extends Component {
         <Chatpage friend={this.state.friend} home={this.onhomechange}/>
         </div>
         )
+        
     }
           </div>
     );

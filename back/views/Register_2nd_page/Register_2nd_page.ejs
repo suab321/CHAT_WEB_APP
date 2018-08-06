@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="Register_2nd_page.css">
+</head>
+<body style="background-color: rgba(132,234,4,0.4)">
+<form class='form' action="/image_register" method="POST" enctype="multipart/form-data">
+	<img src="<%= typeof file!='undefined'?file:'http://i.imgur.com/hL0yZEq.gif' %>" height="250px" width="300px">
+	<br><br><br>
+	<label style="font-family: sans-serif;font-size: 1.5em">Upload Your Photo</label><br><br>
+	<input style="text-align: center; color: transparent;padding-left: 200px; font-size:1em" type="file" name="image"><br><br><br><br>
+	<button style="font-size:1.5em">Submit</button><br><br><br>
+	<button style="font-size:1.5em">Or Continue</button>
+</form>
+</body>
+</html>
